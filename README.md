@@ -12,6 +12,10 @@ Replace n.n.n with the version number of this module that you require. See [the 
 *Please don't install without a release number or your app will be unstable.*
 
 ### Step 2
+
+Add **SC-app-page** to the dependency list in **[YourAppName].module.js**
+
+### Step 3
 Add the app.page state to your app:
 
     .state('app.page', {
@@ -22,3 +26,5 @@ Add the app.page state to your app:
         }
       }
     })
+
+The URL can be changed to whatever is required, although the parameter *:pageAlias* should remain the same for the page to work.
