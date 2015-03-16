@@ -28,7 +28,7 @@ angular.module('SC-app-page')
     /**
      * Method for getting one page from the API
      */
-    pageFactory.getPage($stateParams.pageId, function(data) {
+    pageFactory.getPage($stateParams.pageAlias, function(data) {
 
       // SUCCESS
       // Attach the page data to the scope
@@ -64,9 +64,9 @@ angular.module('SC-app-page')
        * @description
        * For getting data for a single content page by page ID
        */
-      getPage: function(pageId, callbackSuccess, callbackError) {
+      getPage: function(pageAlias, callbackSuccess, callbackError) {
 
-        $http.get('/json/api/content-page/'+pageId)
+        $http.get('/json/api/content-page/' + pageAlias)
           .success(callbackSuccess)
           .error(callbackError);
 

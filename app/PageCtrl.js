@@ -15,7 +15,7 @@ angular.module('SC-app-page')
     /**
      * Method for getting one page from the API
      */
-    pageFactory.getPage($stateParams.pageId, function(data) {
+    pageFactory.getPage($stateParams.pageAlias, function(data) {
 
       // SUCCESS
       // Attach the page data to the scope

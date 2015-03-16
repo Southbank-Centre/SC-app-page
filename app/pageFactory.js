@@ -26,9 +26,9 @@ angular.module('SC-app-page')
        * @description
        * For getting data for a single content page by page ID
        */
-      getPage: function(pageId, callbackSuccess, callbackError) {
+      getPage: function(pageAlias, callbackSuccess, callbackError) {
 
-        $http.get('/json/api/content-page/'+pageId)
+        $http.get('/json/api/content-page/' + pageAlias)
           .success(callbackSuccess)
           .error(callbackError);
 
