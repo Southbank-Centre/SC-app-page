@@ -1,41 +1,6 @@
 'use strict';
 
 /**
- * @ngdoc overview
- * @name SC-app-page
- * @description
- *
- * Provides the app with the ability to display page content and features
- */
-angular
-  .module('SC-app-page', []);;'use strict';
-
-/**
- * @ngdoc controller
- * @name SC-app-page.controller:PageCtrl
- * @controller
- *
- * @description
- * Defines the state and behaviour of the $scope for the pageView state
- */
-
-angular.module('SC-app-page')
-  .controller('PageCtrl', ["$scope", "$stateParams", "pageFactory", "utilitiesFactory", function ($scope, $stateParams, pageFactory, utilitiesFactory) {
-
-    /**
-     * Method for getting one page from the API
-     */
-    pageFactory.getPage($stateParams.pageId, function(data) {
-
-      // SUCCESS
-      // Attach the page data to the scope
-      $scope.page = data;
-
-    }, utilitiesFactory.genericHTTPCallbackError);
-
-  }]);;'use strict';
-
-/**
  * @ngdoc service
  * @name SC-app-page.factory:pageFactory
  * @factory
@@ -45,7 +10,7 @@ angular.module('SC-app-page')
  */
 
 angular.module('SC-app-page')
-  .factory('pageFactory', ["$http", function($http) {
+  .factory('pageFactory', function($http) {
 
     return {
 
@@ -71,4 +36,4 @@ angular.module('SC-app-page')
 
     };
     
-  }]);
+  });
