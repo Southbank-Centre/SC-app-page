@@ -4,7 +4,7 @@
   "dependencies": {
     "angular": "~1.2.0",
     "SC-app-utils": "Southbank-Centre/SC-app-utils",
-  	"SC-app-content-components": "Southbank-Centre/SC-app-content-components"
+    "SC-app-content-components": "Southbank-Centre/SC-app-content-components"
   },
   "appPath": "app",
   "main": "./release/SC-app-page.min.js",
