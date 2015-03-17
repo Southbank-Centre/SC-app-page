@@ -2,6 +2,10 @@
 
 ## Installation
 
+### Step 0
+
+Check [this app's dependencies](https://github.com/Southbank-Centre/SC-app-page/blob/master/bower.json) and make sure that you follow the installation instructions for the SC-app-* modules that this one depends on.
+
 ### Step 1
 Run the following command in your app's root directory.
 
@@ -16,10 +20,10 @@ Replace n.n.n with the version number of this module that you require. See [the 
 Add **SC-app-page** to the dependency list in **[YourAppName].module.js**
 
 ### Step 3
-Add the app.page state to your app:
+Add the app.pageSingle state to your app:
 
-    .state('app.page', {
-      url: '/page/:pageAlias',
+    .state('app.pageSingle', {
+      url: '^/page/:pageAlias',
       views: {
         '@': {
           templateUrl: 'bower_components/SC-app-page/release/pageView.html'
